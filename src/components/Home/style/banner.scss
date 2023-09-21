@@ -1,0 +1,69 @@
+// .banner {
+//   position: relative;
+//   width: 100%;
+//   height: 86vh;
+//   margin-top: 100px;
+//   display: flex;
+//   z-index: 1;
+//   display: flex;
+//   gap: 2rem;
+// }
+
+// .left,
+// .right {
+//   position: absolute;
+//   top: 0;
+//   height: 100%;
+//   width: 50%;
+//   background-image: url("../../../assets/image\ 1.png");
+//   background-size: cover;
+//   background-position: center;
+// }
+
+
+// .left {
+//   left: 200px;
+//   filter: blur(10px);
+//   height: 100%;
+// }
+
+// .right {
+//   right: 0px;
+//   height: 100%;
+// }
+
+// .diagonal {
+//     content: url('../../../assets/diagonal-banner.png');
+//     transform: translateX(-334px);
+//     background: transparent;
+// }
+
+// .content {
+//   position: relative;
+// }
+
+
+.banner {
+    height: 86.1vh;
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    .left{
+        background-image: url('./../../../assets/image\ 1.png');
+        width: 35%;
+        height: 100%;
+    }
+    .right{
+        background-image: url('../../../assets/image\ 1.png');
+        width: 65%;
+        height: 100%;
+        position: relative;
+        &::before{
+            content: url('./../../../assets/diagonal-banner.png');
+            width: 250px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
