@@ -1,69 +1,66 @@
-// .banner {
-//   position: relative;
-//   width: 100%;
-//   height: 86vh;
-//   margin-top: 100px;
-//   display: flex;
-//   z-index: 1;
-//   display: flex;
-//   gap: 2rem;
-// }
-
-// .left,
-// .right {
-//   position: absolute;
-//   top: 0;
-//   height: 100%;
-//   width: 50%;
-//   background-image: url("../../../assets/image\ 1.png");
-//   background-size: cover;
-//   background-position: center;
-// }
-
-
-// .left {
-//   left: 200px;
-//   filter: blur(10px);
-//   height: 100%;
-// }
-
-// .right {
-//   right: 0px;
-//   height: 100%;
-// }
-
-// .diagonal {
-//     content: url('../../../assets/diagonal-banner.png');
-//     transform: translateX(-334px);
-//     background: transparent;
-// }
-
-// .content {
-//   position: relative;
-// }
-
-
 .banner {
-    height: 86.1vh;
-    width: 100%;
+  position: relative;
+  margin-top: 100px;
+  &::after {
+    content: url("./../../../assets/image\ 1.png");
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .diagonal {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    position: absolute;
+    content: url("./../../../assets/diagonal-banner.png");
+    left: 38.7%;
+    top: 0;
+    z-index: 30;
+    background: transparent;
+  }
+  .right {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: url("../../../assets/image\ 1.png");
+    filter: blur(20px);
+  }
+  .content {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    background: transparent;
     display: flex;
-    margin-top: 100px;
-    .left{
-        background-image: url('./../../../assets/image\ 1.png');
-        width: 35%;
-        height: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    h2,
+    h1,
+    p, .button-container {
+      background: transparent;
     }
-    .right{
-        background-image: url('../../../assets/image\ 1.png');
-        width: 65%;
-        height: 100%;
-        position: relative;
-        &::before{
-            content: url('./../../../assets/diagonal-banner.png');
-            width: 250px;
-            height: 100%;
-            position: absolute;
-            left: 0;
-        }
-    }
+  }
+}
+
+h2 {
+  font-size: 50px;
+  color: white;
+}
+h1 {
+  font-size: 80px;
+  color: #a9bff3;
+}
+p{
+    color: black;
+}
+
+.first-button {
+    background-color: #2860E1;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+.second-button {
+    color: white;
+    font-size: 18px;
 }
